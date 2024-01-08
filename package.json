@@ -55,6 +55,7 @@
     "@storybook/test": "7.6.6",
     "@storybook/test-runner": "^0.16.0",
     "@storybook/testing-library": "^0.2.2",
+    "@tailwindcss/typography": "^0.5.10",
     "@tanstack/eslint-plugin-query": "^5.12.1",
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",

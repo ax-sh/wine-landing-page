@@ -56,14 +56,14 @@ function RightGrid() {
 }
 
 function OurWinesButton() {
-	return <button className={'bg-red-600 px-20 py-5 rounded-sm'}>Our Wines</button>
+	return <button className={'bg-red-600 px-20 py-5 rounded-sm font-medium'}>Our Wines</button>
 }
 
 function LeftGrid() {
 	return (
 		<div className={'grid grid-rows-2'}>
 			<div className={'row-start-3 p-10 flex flex-col gap-10'}>
-				<h5 className={'text-xs uppercase'}>Italian Wine since 1555</h5>
+				<h5 className={'text-xs uppercase prose'}>Italian Wine since 1555</h5>
 				<h4 className={'text-5xl'}>The Great Italian Wines With A History</h4>
 				<OurWinesButton />
 			</div>

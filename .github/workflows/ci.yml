@@ -1,0 +1,56 @@
+name: App CI
+
+on:
+  push:
+    # Run on all branches
+    branches:
+      - '*'
+    # Run only if files modified are not docs
+    paths-ignore:
+      - '*.md'
+  pull_request:
+    # Run on all branches
+    branches:
+      - '*'
+    # Run only if files modified are not docs
+    paths-ignore:
+      - '*.md'
+
+jobs:
+  buildAndTest:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: 🗂️ Install dependencies
+        run: pnpm i
+
+      - name: 🔨 Build
+        run: pnpm build:ci
+
+      - name: 🧪 Test
+        run: pnpm test:ci
+
+      # Upload dist artifacts
+      - uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist/
+
+      # Upload coverage artifacts
+      - uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage/lcov.info

@@ -1,0 +1,33 @@
+{
+	"printWidth": 120,
+	"arrowParens": "avoid",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"jsxSingleQuote": true,
+
+	"quoteProps": "as-needed",
+	"semi": false,
+	"singleQuote": true,
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"useTabs": true,
+	"plugins": ["@trivago/prettier-plugin-sort-imports"],
+
+	"importOrder": [
+		"react",
+		"^@core/(.*)$",
+		"^@server/(.*)$",
+		"^@ui/(.*)$",
+		"^[./]",
+		"^react-icons",
+
+		"^@tanstack/react-query",
+		"^msw",
+		"\/mocks",
+		"^@testing-library/react",
+		"^@testing-library/jest-dom/vitest"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true,
+	"endOfLine": "lf"
+}

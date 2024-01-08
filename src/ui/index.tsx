@@ -15,9 +15,9 @@ function usePostQuery() {
 }
 
 export default function HttpApp() {
-	const { isLoading, isSuccess, isError, data } = usePostQuery()
-	if (isLoading) return <Loader />
-	if (isError) return <>error</>
-	console.log(isSuccess, data)
+	// const { isLoading, isSuccess, isError, data } = usePostQuery()
+	// if (isLoading) return <Loader />
+	// if (isError) return <>error</>
+	// console.log(isSuccess, data)
 	return <div>Hello</div>
 }

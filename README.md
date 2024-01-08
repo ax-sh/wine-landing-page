@@ -4,5 +4,9 @@
 Mobile responsive wine landing page
 
 ```shell
+npm i 
+npm dev
+# or
+pnpm i 
 pnpm dev
 ```
